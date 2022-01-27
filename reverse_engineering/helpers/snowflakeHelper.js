@@ -1050,6 +1050,10 @@ const filterDocuments = (rows) => {
 	return filterDocuments(rows.slice(0, rows.length / 2));
 };
 
+const applyScript = async script => {
+	return await execute(script);
+}
+
 module.exports = {
 	connect,
 	disconnect,
@@ -1069,5 +1073,6 @@ module.exports = {
 	getContainerData,
 	getAccount,
 	getAccessUrl,
-	setDependencies
+	setDependencies,
+	applyScript,
 };
